@@ -4617,39 +4617,39 @@ var author$project$RecordUpdate$benchmark = A2(
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
 			'update 1 of 2 fields',
-			'normal: {r2|a=1}',
+			'normal {r2|a=1}',
 			function (_n0) {
 				return _Utils_update(
 					author$project$RecordUpdate$r2,
 					{E: 1});
 			},
-			'create: {a=1,b=r2.b}',
+			'create {a=1,b=r2.b}',
 			function (_n1) {
 				return {E: 1, G: author$project$RecordUpdate$r2.G};
 			}),
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
 			'update 1 of 3 fields',
-			'normal: {r3|a=1}',
+			'normal {r3|a=1}',
 			function (_n2) {
 				return _Utils_update(
 					author$project$RecordUpdate$r3,
 					{E: 1});
 			},
-			'create: {a=1,b=r3.b,c=r3.c}',
+			'create {a=1,b=r3.b,c=r3.c}',
 			function (_n3) {
 				return {E: 1, G: author$project$RecordUpdate$r3.G, aq: author$project$RecordUpdate$r3.aq};
 			}),
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
 			'update 2 of 3 fields',
-			'normal: {r3|a=1,b=2}',
+			'normal {r3|a=1,b=2}',
 			function (_n4) {
 				return _Utils_update(
 					author$project$RecordUpdate$r3,
 					{E: 1, G: 2});
 			},
-			'create: {a=1,b=2,c=r3.c}',
+			'create {a=1,b=2,c=r3.c}',
 			function (_n5) {
 				return {E: 1, G: 2, aq: author$project$RecordUpdate$r3.aq};
 			})
