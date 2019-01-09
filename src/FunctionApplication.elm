@@ -1,4 +1,4 @@
-module Main exposing (main)
+module FunctionApplication exposing (main)
 
 import Benchmark exposing (Benchmark)
 import Benchmark.Runner as Runner

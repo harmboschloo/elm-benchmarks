@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Main</title>
+  <title>FunctionApplication</title>
 </head>
 
 <body>
@@ -4574,15 +4574,15 @@ var elm$core$Array$toList = function (array) {
 	return A3(elm$core$Array$foldr, elm$core$List$cons, _List_Nil, array);
 };
 var elm$core$Basics$add = _Basics_add;
-var author$project$Main$sum2 = F2(
+var author$project$FunctionApplication$sum2 = F2(
 	function (a, b) {
 		return a + b;
 	});
-var author$project$Main$sum3 = F3(
+var author$project$FunctionApplication$sum3 = F3(
 	function (a, b, c) {
 		return (a + b) + c;
 	});
-var author$project$Main$sum4 = F4(
+var author$project$FunctionApplication$sum4 = F4(
 	function (a, b, c, d) {
 		return ((a + b) + c) + d;
 	});
@@ -4620,7 +4620,7 @@ var elm_explorations$benchmark$Benchmark$Benchmark$Group = F2(
 		return {$: 2, a: a, b: b};
 	});
 var elm_explorations$benchmark$Benchmark$describe = elm_explorations$benchmark$Benchmark$Benchmark$Group;
-var author$project$Main$benchmark = A2(
+var author$project$FunctionApplication$benchmark = A2(
 	elm_explorations$benchmark$Benchmark$describe,
 	'function application',
 	_List_fromArray(
@@ -4630,11 +4630,11 @@ var author$project$Main$benchmark = A2(
 			'sum2',
 			'partial: (sum2 1) 2',
 			function (_n0) {
-				return author$project$Main$sum2(1)(2);
+				return author$project$FunctionApplication$sum2(1)(2);
 			},
 			'full: sum2 1 2',
 			function (_n1) {
-				return A2(author$project$Main$sum2, 1, 2);
+				return A2(author$project$FunctionApplication$sum2, 1, 2);
 			}),
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
@@ -4642,24 +4642,24 @@ var author$project$Main$benchmark = A2(
 			'partial: (sum3 1) 2 3',
 			function (_n2) {
 				return A2(
-					author$project$Main$sum3(1),
+					author$project$FunctionApplication$sum3(1),
 					2,
 					3);
 			},
 			'full: sum3 1 2 3',
 			function (_n3) {
-				return A3(author$project$Main$sum3, 1, 2, 3);
+				return A3(author$project$FunctionApplication$sum3, 1, 2, 3);
 			}),
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
 			'sum3',
 			'partial: (sum3 1 2) 3',
 			function (_n4) {
-				return A2(author$project$Main$sum3, 1, 2)(3);
+				return A2(author$project$FunctionApplication$sum3, 1, 2)(3);
 			},
 			'full: sum3 1 2 3',
 			function (_n5) {
-				return A3(author$project$Main$sum3, 1, 2, 3);
+				return A3(author$project$FunctionApplication$sum3, 1, 2, 3);
 			}),
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
@@ -4667,14 +4667,14 @@ var author$project$Main$benchmark = A2(
 			'partial: (sum4 1) 2 3 4',
 			function (_n6) {
 				return A3(
-					author$project$Main$sum4(1),
+					author$project$FunctionApplication$sum4(1),
 					2,
 					3,
 					4);
 			},
 			'full: sum4 1 2 3 4',
 			function (_n7) {
-				return A4(author$project$Main$sum4, 1, 2, 3, 4);
+				return A4(author$project$FunctionApplication$sum4, 1, 2, 3, 4);
 			}),
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
@@ -4682,24 +4682,24 @@ var author$project$Main$benchmark = A2(
 			'partial: (sum4 1 2) 3 4',
 			function (_n8) {
 				return A2(
-					A2(author$project$Main$sum4, 1, 2),
+					A2(author$project$FunctionApplication$sum4, 1, 2),
 					3,
 					4);
 			},
 			'full: sum4 1 2 3 4',
 			function (_n9) {
-				return A4(author$project$Main$sum4, 1, 2, 3, 4);
+				return A4(author$project$FunctionApplication$sum4, 1, 2, 3, 4);
 			}),
 			A5(
 			elm_explorations$benchmark$Benchmark$compare,
 			'sum4',
 			'partial: (sum4 1 2 3) 4',
 			function (_n10) {
-				return A3(author$project$Main$sum4, 1, 2, 3)(4);
+				return A3(author$project$FunctionApplication$sum4, 1, 2, 3)(4);
 			},
 			'full: sum4 1 2 3 4',
 			function (_n11) {
-				return A4(author$project$Main$sum4, 1, 2, 3, 4);
+				return A4(author$project$FunctionApplication$sum4, 1, 2, 3, 4);
 			})
 		]));
 var elm$core$Array$branchFactor = 32;
@@ -14815,11 +14815,11 @@ var elm_explorations$benchmark$Benchmark$Runner$program = function (benchmark) {
 			bv: elm_explorations$benchmark$Benchmark$Runner$App$view
 		});
 };
-var author$project$Main$main = elm_explorations$benchmark$Benchmark$Runner$program(author$project$Main$benchmark);
-_Platform_export({'Main':{'init':author$project$Main$main(
+var author$project$FunctionApplication$main = elm_explorations$benchmark$Benchmark$Runner$program(author$project$FunctionApplication$benchmark);
+_Platform_export({'FunctionApplication':{'init':author$project$FunctionApplication$main(
 	elm$json$Json$Decode$succeed(0))(0)}});}(this));
 
-var app = Elm.Main.init({ node: document.getElementById("elm-f0111bc4e658d0f98db96260c16f7e49") });
+var app = Elm.FunctionApplication.init({ node: document.getElementById("elm-f0111bc4e658d0f98db96260c16f7e49") });
 if (document.getElementById("elm-f0111bc4e658d0f98db96260c16f7e49"))
 {
   document.getElementById("elm-f0111bc4e658d0f98db96260c16f7e49").innerText = 'This is a headless program, meaning there is nothing to show here.\n\nI started the program anyway though, and you can access it as `app` in the developer console.';
